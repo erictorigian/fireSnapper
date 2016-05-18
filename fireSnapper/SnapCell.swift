@@ -22,10 +22,10 @@ class SnapCell: UITableViewCell {
 	}
 	
 	func configureCell(snap: Snap) {
-		snapName.text = snap.name
-		snapImage.image = snap.getSnapImg()
-		snapDetails.text = snap.details
-		snapTags.text = snap.tags
+		snapName.text = snap.snapName
+//		snapImage.image = snap.getSnapImg()
+		snapDetails.text = snap.snapDesc
+		snapTags.text = snap.snapTags
 		
 	}
 }
