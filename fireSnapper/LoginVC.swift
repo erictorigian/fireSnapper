@@ -50,6 +50,9 @@ class LoginVC: UIViewController {
 						print("Login failed.  \(error.description)")
 					} else {
 						print("Logged in! \(authData)")
+                        let user = ["provider": authData.provider!]
+                        DataService.ds.createFirebaseUser(authData.uid, user: user)
+                        
 						NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
 						self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
 					}
@@ -73,9 +76,16 @@ class LoginVC: UIViewController {
 							if error != nil {
 								self.showErrorAlert("Could not create account", msg: "Problem creating account on server \(error.description)")
 							} else {
-								DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: nil)
-								NSUserDefaults.standardUserDefaults().setValue(results[KEY_UID], forKey: KEY_UID)
-								self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+                                DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: { err, authData in
+                                    let user = ["provider": authData.provider!, "email": email]
+                                    DataService.ds.createFirebaseUser(authData.uid, user: user)
+                                    
+                                    NSUserDefaults.standardUserDefaults().setValue(results[KEY_UID], forKey: KEY_UID)
+                                    self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+                                    })
+                                
+                                
+								
 							}
 						})
 					} else if error.code == STATUS_INVALID_PWD {

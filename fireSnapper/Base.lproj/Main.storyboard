@@ -32,13 +32,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dot-GZ-OIl">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in/Sign up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHA-nW-zus">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sign in/Sign up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHA-nW-zus">
                                         <rect key="frame" x="23" y="25" width="120" height="22"/>
                                         <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fireSNAPPER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9d-yC-yuj">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="fireSNAPPER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9d-yC-yuj">
                                         <rect key="frame" x="472" y="26" width="107" height="24"/>
                                         <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -58,13 +58,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhi-eZ-OYV" customClass="MaterialView" customModule="fireSnapper" customModuleProvider="target">
                                 <rect key="frame" x="20" y="214" width="560" height="366"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Login/Signup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJQ-cc-amQ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email Login/Signup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJQ-cc-amQ">
                                         <rect key="frame" x="20" y="20" width="155" height="22"/>
                                         <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="16"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LXv-fo-oqa" customClass="MaterialTextField" customModule="fireSnapper" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LXv-fo-oqa" customClass="MaterialTextField" customModule="fireSnapper" customModuleProvider="target">
                                         <rect key="frame" x="20" y="61" width="532" height="35"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -74,7 +74,7 @@
                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eWo-Ji-EBT" customClass="MaterialTextField" customModule="fireSnapper" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eWo-Ji-EBT" customClass="MaterialTextField" customModule="fireSnapper" customModuleProvider="target">
                                         <rect key="frame" x="20" y="116" width="532" height="35"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -84,7 +84,7 @@
                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpP-ya-nMa" customClass="MaterialButton" customModule="fireSnapper" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpP-ya-nMa" customClass="MaterialButton" customModule="fireSnapper" customModuleProvider="target">
                                         <rect key="frame" x="205" y="201" width="150" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -169,7 +169,7 @@
             </objects>
             <point key="canvasLocation" x="-156" y="248"/>
         </scene>
-        <!--MainVC-->
+        <!--fireSnapper-->
         <scene sceneID="4zn-UM-5eY">
             <objects>
                 <viewController id="59a-w7-r0M" customClass="MainVC" customModule="fireSnapper" customModuleProvider="target" sceneMemberID="viewController">
@@ -178,15 +178,16 @@
                         <viewControllerLayoutGuide type="bottom" id="r5d-p5-zhh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lOG-Xd-oru">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="121" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xQC-Wl-IVX">
-                                <rect key="frame" x="0.0" y="74" width="600" height="516"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="526"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="0.078030901230000005" blue="0.18224410099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SnapCell" rowHeight="121" id="XWX-oE-cdl" customClass="SnapCell" customModule="fireSnapper" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="121"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XWX-oE-cdl" id="7Ds-dJ-y5V">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="121"/>
@@ -258,27 +259,34 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="r5d-p5-zhh" firstAttribute="top" secondItem="xQC-Wl-IVX" secondAttribute="bottom" constant="10" id="N9v-op-Ufz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xQC-Wl-IVX" secondAttribute="trailing" constant="-20" id="PSM-hJ-mFb"/>
-                            <constraint firstItem="xQC-Wl-IVX" firstAttribute="leading" secondItem="lOG-Xd-oru" secondAttribute="leadingMargin" constant="-20" id="T7Y-4e-2eA"/>
-                            <constraint firstItem="xQC-Wl-IVX" firstAttribute="top" secondItem="ds9-0n-UYa" secondAttribute="bottom" constant="10" id="yiO-ze-XfO"/>
+                            <constraint firstItem="xQC-Wl-IVX" firstAttribute="top" secondItem="lOG-Xd-oru" secondAttribute="topMargin" id="79t-4p-MbL"/>
+                            <constraint firstItem="xQC-Wl-IVX" firstAttribute="top" secondItem="ds9-0n-UYa" secondAttribute="bottom" id="DGi-Mb-rKu"/>
+                            <constraint firstItem="xQC-Wl-IVX" firstAttribute="leading" secondItem="lOG-Xd-oru" secondAttribute="leading" id="KUR-80-dcc"/>
+                            <constraint firstAttribute="trailing" secondItem="xQC-Wl-IVX" secondAttribute="trailing" id="Rye-1t-8Ee"/>
+                            <constraint firstItem="r5d-p5-zhh" firstAttribute="top" secondItem="xQC-Wl-IVX" secondAttribute="bottom" constant="10" id="gcI-rM-9UA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="kGD-4k-2zS"/>
+                    <navigationItem key="navigationItem" title="fireSnapper" id="kGD-4k-2zS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="29a-NN-OIZ">
+                            <connections>
+                                <segue destination="lRd-37-qIk" kind="show" identifier="NewSnap" id="trX-Py-Hxz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="xQC-Wl-IVX" id="I1j-ER-mNI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCO-Qb-6YN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1221" y="248"/>
+            <point key="canvasLocation" x="1197" y="246"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="trq-D0-uBc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Md-72-5BM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YTN-Of-Lpp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="YTN-Of-Lpp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -290,6 +298,95 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5F-UP-u1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="504" y="248"/>
+        </scene>
+        <!--New Snap View Controller-->
+        <scene sceneID="TNA-Xm-FwH">
+            <objects>
+                <viewController id="lRd-37-qIk" userLabel="New Snap View Controller" customClass="NewSnapVC" customModule="fireSnapper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wxv-cY-179"/>
+                        <viewControllerLayoutGuide type="bottom" id="C5t-q8-cjs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bBZ-pA-fpo">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Snap name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwg-3f-wDX">
+                                <rect key="frame" x="20" y="96" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Details about the snap" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4NY-LH-9fe">
+                                <rect key="frame" x="20" y="140" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Snap tags" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ap-LP-2Iz">
+                                <rect key="frame" x="20" y="184" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="kRz-bz-bP1">
+                                <rect key="frame" x="213" y="229" width="175" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="SFn-Y4-Xty"/>
+                                    <constraint firstAttribute="width" constant="175" id="WjZ-mu-5cx"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="394-NP-13D">
+                                <rect key="frame" x="213" y="229" width="175" height="175"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="ADD IMAGE">
+                                    <color key="titleColor" red="0.025180288459999998" green="0.025180288459999998" blue="0.025180288459999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addImage:" destination="lRd-37-qIk" eventType="touchUpInside" id="CL2-xZ-y7x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSK-Qb-fWg">
+                                <rect key="frame" x="258" y="414" width="85" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="l03-u4-JMd"/>
+                                    <constraint firstAttribute="width" constant="85" id="rmt-tX-OZg"/>
+                                </constraints>
+                                <state key="normal" title="Create Snap"/>
+                                <connections>
+                                    <action selector="createSnap:" destination="lRd-37-qIk" eventType="touchUpInside" id="lvZ-7b-v4n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4NY-LH-9fe" firstAttribute="trailing" secondItem="bBZ-pA-fpo" secondAttribute="trailingMargin" id="0KT-tW-dTH"/>
+                            <constraint firstItem="kRz-bz-bP1" firstAttribute="centerX" secondItem="bBZ-pA-fpo" secondAttribute="centerX" id="1eO-07-sOD"/>
+                            <constraint firstItem="4NY-LH-9fe" firstAttribute="top" secondItem="gwg-3f-wDX" secondAttribute="bottom" constant="14" id="4Yd-g9-p8F"/>
+                            <constraint firstItem="bSK-Qb-fWg" firstAttribute="centerX" secondItem="bBZ-pA-fpo" secondAttribute="centerX" id="9Xe-ef-Qq5"/>
+                            <constraint firstItem="gwg-3f-wDX" firstAttribute="top" secondItem="Wxv-cY-179" secondAttribute="bottom" constant="32" id="AKQ-t9-qrX"/>
+                            <constraint firstItem="1ap-LP-2Iz" firstAttribute="leading" secondItem="bBZ-pA-fpo" secondAttribute="leadingMargin" id="BY5-cf-k13"/>
+                            <constraint firstItem="394-NP-13D" firstAttribute="width" secondItem="kRz-bz-bP1" secondAttribute="width" id="JA6-L2-8GF"/>
+                            <constraint firstItem="394-NP-13D" firstAttribute="height" secondItem="kRz-bz-bP1" secondAttribute="height" id="XS2-o5-BvJ"/>
+                            <constraint firstItem="gwg-3f-wDX" firstAttribute="trailing" secondItem="bBZ-pA-fpo" secondAttribute="trailingMargin" id="Y0r-mW-K0I"/>
+                            <constraint firstItem="kRz-bz-bP1" firstAttribute="top" secondItem="1ap-LP-2Iz" secondAttribute="bottom" constant="15" id="aOy-XA-7hX"/>
+                            <constraint firstItem="1ap-LP-2Iz" firstAttribute="top" secondItem="4NY-LH-9fe" secondAttribute="bottom" constant="14" id="gfc-Gu-vtF"/>
+                            <constraint firstItem="4NY-LH-9fe" firstAttribute="leading" secondItem="bBZ-pA-fpo" secondAttribute="leadingMargin" id="h2X-cy-tSu"/>
+                            <constraint firstItem="1ap-LP-2Iz" firstAttribute="trailing" secondItem="bBZ-pA-fpo" secondAttribute="trailingMargin" id="hQU-e9-14n"/>
+                            <constraint firstItem="bSK-Qb-fWg" firstAttribute="top" secondItem="394-NP-13D" secondAttribute="bottom" constant="10" id="hsH-5f-EVc"/>
+                            <constraint firstItem="gwg-3f-wDX" firstAttribute="leading" secondItem="bBZ-pA-fpo" secondAttribute="leadingMargin" id="ksa-cv-tBf"/>
+                            <constraint firstItem="394-NP-13D" firstAttribute="centerX" secondItem="kRz-bz-bP1" secondAttribute="centerX" id="tBb-T3-Tju"/>
+                            <constraint firstItem="394-NP-13D" firstAttribute="centerY" secondItem="kRz-bz-bP1" secondAttribute="centerY" id="tKU-zk-O4o"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addSnapButton" destination="bSK-Qb-fWg" id="99h-bE-78X"/>
+                        <outlet property="snapDetails" destination="4NY-LH-9fe" id="haw-ee-wSe"/>
+                        <outlet property="snapImage" destination="kRz-bz-bP1" id="nQl-CD-hEI"/>
+                        <outlet property="snapName" destination="gwg-3f-wDX" id="UCO-fZ-00n"/>
+                        <outlet property="snapTags" destination="1ap-LP-2Iz" id="aby-o6-sZc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nnG-Lu-Owo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868" y="246"/>
         </scene>
     </scenes>
     <resources>

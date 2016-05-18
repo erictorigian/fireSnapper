@@ -20,6 +20,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 		
 		tableView.delegate = self
 		tableView.dataSource = self
+        tableView.rowHeight = 121
 	}
 	
 	override func viewDidAppear(animated: Bool) {
