@@ -28,7 +28,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         DataService.ds.REF_SNAPS.observeEventType(.Value, withBlock: { snapshot in
             self.snaps = []
             
-            if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for fbSnap in snapshots {
                     
                     if let snapDict = fbSnap.value as? Dictionary<String, AnyObject> {
@@ -70,6 +70,11 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return SnapCell()
         }
     }
+	
+	//MARK: - IBActions
+	
+	@IBAction func searchBtnPressed(sender: AnyObject) {
+	}
 
 
 	

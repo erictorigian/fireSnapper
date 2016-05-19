@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
 
@@ -26,9 +27,10 @@ class LoginVC: UIViewController {
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 		
-		if NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) != nil {
-			self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+		if let user = FIRAuth.auth()?.currentUser {
+			performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
 		}
+		
 	}
 	
 	//MARK: - IBActions
@@ -44,20 +46,23 @@ class LoginVC: UIViewController {
 				let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
 				print("successfully logged in with facebook. \(accessToken)")
 				
-				DataService.ds.REF_BASE.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
+				let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
+				
+				FIRAuth.auth()?.signInWithCredential(credential) { user,error in
 					
 					if error != nil {
-						print("Login failed.  \(error.description)")
+						print("Login failed.  \(error!.description)")
 					} else {
-						print("Logged in! \(authData)")
-                        let user = ["provider": authData.provider!]
-                        DataService.ds.createFirebaseUser(authData.uid, user: user)
-                        
-						NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
+						let userDetails = ["provider": "facebook"]
+						let uid = user!.uid
+						DataService.ds.createFirebaseUser(uid, userDetails: userDetails)
+
+						
+//						NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
 						self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
 					}
 					
-				})
+				}
 			}
 		}
 
@@ -67,46 +72,56 @@ class LoginVC: UIViewController {
 	@IBAction func attemptLogin(sender: UIButton! ) {
 		
 		if let email = emailField.text where email != "", let pwd = passwordField.text where pwd != "" {
-			
-			DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: { error, authData in
+
+			FIRAuth.auth()?.signInWithEmail(email, password: pwd, completion: { user, error in
 				if error != nil {
 					
-					if error.code == STATUS_ACCOUNT_NONEXISTS {
-						DataService.ds.REF_BASE.createUser(email, password: pwd, withValueCompletionBlock: { error, results in
+					if error!.code == STATUS_ACCOUNT_NONEXISTS {
+						
+						FIRAuth.auth()?.createUserWithEmail(email, password: pwd, completion: {( user, error) in
+							
 							if error != nil {
-								self.showErrorAlert("Could not create account", msg: "Problem creating account on server \(error.description)")
+								self.showErrorAlert("Could not create account", msg: "Problem creating account on server \(error!.description)")
 							} else {
-                                DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: { err, authData in
-                                    let user = ["provider": authData.provider!, "email": email]
-                                    DataService.ds.createFirebaseUser(authData.uid, user: user)
-                                    
-                                    NSUserDefaults.standardUserDefaults().setValue(results[KEY_UID], forKey: KEY_UID)
-                                    self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
-                                    })
-                                
-                                
-								
+								FIRAuth.auth()?.signInWithEmail(email, password: pwd, completion: { user, err in
+
+									let userDetails = ["provider": "email", "email": email ]
+									let uid = user!.uid
+									DataService.ds.createFirebaseUser(uid, userDetails: userDetails)
+					
+									self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+								})
 							}
 						})
-					} else if error.code == STATUS_INVALID_PWD {
+					
+					} else if error!.code == STATUS_INVALID_PWD {
+						
 						self.showErrorAlert("Error logging in", msg: "Invalid password/email combination.   Please try again")
+					
+					} else if error!.code == STATUS_INVALID_EMAIL {
+						
+						self.showErrorAlert("Error logging in", msg: "You did not enter a valid email.   Please try again")
+						
+					} else if error!.code == STATUS_ACCOUNT_DISABLED {
+						
+						self.showErrorAlert("Error logging in", msg: "Your account has been disabled.   Please contact the administrator for futher assistance")
 						
 					} else 	{
-						self.showErrorAlert("Error logging in", msg: error.description)
+						
+						self.showErrorAlert("Error logging in", msg: error!.description)
 					}
-				}  else {
-					NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
-					self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
 					
+				}  else {
+					let userDetails = ["provider": "email", "email": email]
+					let uid = user!.uid
+					DataService.ds.createFirebaseUser(uid, userDetails: userDetails)
+
+					self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
 				}
 			})
-			
-			
-		} else {
-			showErrorAlert("Login Error", msg: "You must include both an email and password to login")
 		}
-		
 	}
+	
 
 	
 	
@@ -118,6 +133,7 @@ class LoginVC: UIViewController {
 		alert.addAction(action)
 		presentViewController(alert, animated: true, completion: nil)
 	}
+	
 	
 
 }

@@ -14,24 +14,24 @@ let URL_BASE = "https://firesnapper.firebaseio.com"
 class DataService {
 	static let ds = DataService()
     
-	private var _REF_BASE = Firebase(url: "\(URL_BASE)")
-    private var _REF_SNAPS = Firebase(url: "\(URL_BASE)/snaps")
-    private var _REF_USERS = Firebase(url: "\(URL_BASE)/users")
+	private var _REF_BASE = FIRDatabase.database().reference()
+    private var _REF_SNAPS = FIRDatabase.database().referenceWithPath("/snaps")
+    private var _REF_USERS = FIRDatabase.database().referenceWithPath("users")
 	
-	var REF_BASE: Firebase {
+	var REF_BASE: FIRDatabaseReference {
 		return _REF_BASE
 	}
     
-    var REF_USERS: Firebase {
+    var REF_USERS: FIRDatabaseReference {
         return _REF_USERS
     }
     
-    var REF_SNAPS: Firebase {
+    var REF_SNAPS: FIRDatabaseReference {
         return _REF_SNAPS
     }
     
-    func createFirebaseUser(uid: String, user: Dictionary<String, String>) {
-        REF_USERS.childByAppendingPath(uid).setValue(user)
+    func createFirebaseUser(uid: String, userDetails: Dictionary<String, AnyObject>) {
+        REF_USERS.childByAppendingPath(uid).setValue(userDetails)
     }
     
     
