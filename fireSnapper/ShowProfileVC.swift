@@ -20,7 +20,7 @@ class ShowProfileVC: UIViewController {
 	//MARK: - IBActions
 	@IBAction func logoutBtnPressed(sender: AnyObject) {
 		try! FIRAuth.auth()!.signOut()
-		let loginVC: UIViewController? = self.storyboard!.instantiateViewControllerWithIdentifier("Login") as! UIViewController
+		let loginVC: UIViewController? = self.storyboard!.instantiateViewControllerWithIdentifier("Login")
 		
 		self.presentViewController(loginVC!, animated: true, completion: nil)
 		

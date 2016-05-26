@@ -53,6 +53,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
 	}
 	
+	func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+		print("message ID: \(userInfo["gcm.message_id"]!)")
+		print("%@", userInfo)
+	}
 	
 }
 

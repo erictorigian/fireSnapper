@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SnapCell: UITableViewCell {
 	@IBOutlet weak var snapName: UILabel!
@@ -23,9 +24,20 @@ class SnapCell: UITableViewCell {
 	
 	func configureCell(snap: Snap) {
 		snapName.text = snap.snapName
-//		snapImage.image = snap.getSnapImg()
 		snapDetails.text = snap.snapDesc
 		snapTags.text = snap.snapTags
 		
+		if snap.imageURL != nil {
+			DataService.ds.REF_STORAGE.storage.referenceForURL(snap.imageURL!).dataWithMaxSize(INT64_MAX){ (data, error) in
+				if let error = error {
+					print("error downloading file \(error)")
+					return
+				}
+				
+				self.snapImage.image = UIImage(data: data!)
+			}
+		}
+		
 	}
+	
 }

@@ -8,18 +8,20 @@
 
 import UIKit
 import Foundation
+import Firebase
+
 
 class Snap {
 	
     
     //MARK: - Private class variables
     
-	private var _imageURL :String?
+	private var _imageURL :String!
 	private var _snapName: String!
 	private var _snapDesc: String!
 	private var _snapTags: String!
     private var _snapKey: String!
-	
+		
     //MARK: - Public variables
     
     var snapName: String {
@@ -41,11 +43,11 @@ class Snap {
     var snapKey: String {
         return _snapKey
     }
-    
-    
+	
+	    
     //MARK: - init
-    
-    init(name: String, snapDesc: String, tags: String, imageURL: String) {
+	
+	init(name: String, snapDesc: String, tags: String, imageURL: String?) {
         self._snapName = name
         self._snapDesc = snapDesc
         self._snapTags = tags
@@ -67,25 +69,8 @@ class Snap {
         }
         
         if let imageURL = dictionary["imageURL"] as? String {
-            self._imageURL = imageURL
-        }
-    }
-    
-    
-    //MARK: - Getter/Setters
-//	func setSnapImage(img: UIImage) {
-//		let data = UIImagePNGRepresentation(img)
-//		self.image = data
-//	}
-//	
-//	func setSnapImageWithData(imgData: NSData) {
-//		self.image = imgData
-//	}
-//	
-//	
-//	func getSnapImg() -> UIImage {
-//		let img = UIImage(data: self.image!)!
-//		return img
-//	}
-
+			self._imageURL = imageURL
+		}
+		
+	}
 }

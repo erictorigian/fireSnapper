@@ -34,6 +34,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     if let snapDict = fbSnap.value as? Dictionary<String, AnyObject> {
                         let key = fbSnap.key
                         let snap = Snap(snapKey: key, dictionary: snapDict)
+						print("key: \(fbSnap.key)  Value: \(fbSnap.value)")
                         
                         self.snaps.append(snap)
                     }

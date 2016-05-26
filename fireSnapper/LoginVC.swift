@@ -27,7 +27,7 @@ class LoginVC: UIViewController {
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 		
-		if let user = FIRAuth.auth()?.currentUser {
+		if (FIRAuth.auth()?.currentUser) != nil {
 			performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
 		}
 		
@@ -57,8 +57,6 @@ class LoginVC: UIViewController {
 						let uid = user!.uid
 						DataService.ds.createFirebaseUser(uid, userDetails: userDetails)
 
-						
-//						NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
 						self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
 					}
 					
