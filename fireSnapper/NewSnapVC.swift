@@ -25,6 +25,7 @@ class NewSnapVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		
 //		imagePicker = UIImagePickerController()
 //		imagePicker.delegate = self
 		snapImage.layer.cornerRadius = 4.0
@@ -87,7 +88,7 @@ class NewSnapVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
 					DataService.ds.REF_STORAGE.child(filePath)
 						.putFile(imageFile!, metadata: metadata) { (metadata, error) in
 							if let error = error {
-								print("Error uploading: \(error.description)")
+								print("Error uploading: \(error.debugDescription)")
 								return
 							}
 				
@@ -125,4 +126,5 @@ class NewSnapVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
 	}
 	
 	
+
 }

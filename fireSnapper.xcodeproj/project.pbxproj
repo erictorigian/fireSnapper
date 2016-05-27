@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070827371CF8CECC00A0A60C /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 070827361CF8CECC00A0A60C /* GoogleService-Info-2.plist */; };
 		079EE7711CEB99FA002F9062 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079EE7701CEB99FA002F9062 /* AppDelegate.swift */; };
 		079EE7731CEB99FA002F9062 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079EE7721CEB99FA002F9062 /* ViewController.swift */; };
 		079EE7761CEB99FA002F9062 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 079EE7741CEB99FA002F9062 /* Main.storyboard */; };
@@ -25,12 +26,12 @@
 		079EE7A01CEBAD1E002F9062 /* SnapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079EE79F1CEBAD1E002F9062 /* SnapCell.swift */; };
 		079EE7A21CEBAFCF002F9062 /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079EE7A11CEBAFCF002F9062 /* Snap.swift */; };
 		079EE7A41CEBB6E3002F9062 /* NewSnapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079EE7A31CEBB6E3002F9062 /* NewSnapVC.swift */; };
-		079EE7A61CEE0683002F9062 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 079EE7A51CEE0683002F9062 /* GoogleService-Info.plist */; };
 		079EE7A81CEE3FF0002F9062 /* ShowProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079EE7A71CEE3FF0002F9062 /* ShowProfileVC.swift */; };
 		B05DB45818830186C0A1BCEB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A467657275205E39ED3BC442 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		070827361CF8CECC00A0A60C /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		079EE76D1CEB99F9002F9062 /* fireSnapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fireSnapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		079EE7701CEB99FA002F9062 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		079EE7721CEB99FA002F9062 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		079EE79F1CEBAD1E002F9062 /* SnapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapCell.swift; sourceTree = "<group>"; };
 		079EE7A11CEBAFCF002F9062 /* Snap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
 		079EE7A31CEBB6E3002F9062 /* NewSnapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSnapVC.swift; sourceTree = "<group>"; };
-		079EE7A51CEE0683002F9062 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		079EE7A71CEE3FF0002F9062 /* ShowProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowProfileVC.swift; sourceTree = "<group>"; };
 		46DA51F93B8371F02F7526C5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A467657275205E39ED3BC442 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,7 +106,7 @@
 				079EE7701CEB99FA002F9062 /* AppDelegate.swift */,
 				079EE7771CEB99FA002F9062 /* Assets.xcassets */,
 				079EE77C1CEB99FA002F9062 /* Info.plist */,
-				079EE7A51CEE0683002F9062 /* GoogleService-Info.plist */,
+				070827361CF8CECC00A0A60C /* GoogleService-Info-2.plist */,
 			);
 			path = fireSnapper;
 			sourceTree = "<group>";
@@ -219,6 +219,11 @@
 				TargetAttributes = {
 					079EE76C1CEB99F9002F9062 = {
 						CreatedOnToolsVersion = 7.3.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -245,8 +250,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				070827371CF8CECC00A0A60C /* GoogleService-Info-2.plist in Resources */,
 				079EE77B1CEB99FA002F9062 /* LaunchScreen.storyboard in Resources */,
-				079EE7A61CEE0683002F9062 /* GoogleService-Info.plist in Resources */,
 				079EE7781CEB99FA002F9062 /* Assets.xcassets in Resources */,
 				079EE7761CEB99FA002F9062 /* Main.storyboard in Resources */,
 			);
