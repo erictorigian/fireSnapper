@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		070827371CF8CECC00A0A60C /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 070827361CF8CECC00A0A60C /* GoogleService-Info-2.plist */; };
+		076C6BE51CF8D18B003FDC27 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 076C6BE41CF8D18B003FDC27 /* GoogleService-Info.plist */; };
 		079EE7711CEB99FA002F9062 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079EE7701CEB99FA002F9062 /* AppDelegate.swift */; };
 		079EE7731CEB99FA002F9062 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079EE7721CEB99FA002F9062 /* ViewController.swift */; };
 		079EE7761CEB99FA002F9062 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 079EE7741CEB99FA002F9062 /* Main.storyboard */; };
@@ -31,7 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		070827361CF8CECC00A0A60C /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
+		076C6BE41CF8D18B003FDC27 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		079EE76D1CEB99F9002F9062 /* fireSnapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fireSnapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		079EE7701CEB99FA002F9062 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		079EE7721CEB99FA002F9062 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 				079EE7701CEB99FA002F9062 /* AppDelegate.swift */,
 				079EE7771CEB99FA002F9062 /* Assets.xcassets */,
 				079EE77C1CEB99FA002F9062 /* Info.plist */,
-				070827361CF8CECC00A0A60C /* GoogleService-Info-2.plist */,
+				076C6BE41CF8D18B003FDC27 /* GoogleService-Info.plist */,
 			);
 			path = fireSnapper;
 			sourceTree = "<group>";
@@ -250,8 +250,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				070827371CF8CECC00A0A60C /* GoogleService-Info-2.plist in Resources */,
 				079EE77B1CEB99FA002F9062 /* LaunchScreen.storyboard in Resources */,
+				076C6BE51CF8D18B003FDC27 /* GoogleService-Info.plist in Resources */,
 				079EE7781CEB99FA002F9062 /* Assets.xcassets in Resources */,
 				079EE7761CEB99FA002F9062 /* Main.storyboard in Resources */,
 			);
