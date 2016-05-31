@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		076C6BE51CF8D18B003FDC27 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 076C6BE41CF8D18B003FDC27 /* GoogleService-Info.plist */; };
+		0778AF5F1CFDCF2F00DB3154 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 0778AF5E1CFDCF2F00DB3154 /* readme.md */; };
 		079EE7711CEB99FA002F9062 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079EE7701CEB99FA002F9062 /* AppDelegate.swift */; };
 		079EE7731CEB99FA002F9062 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079EE7721CEB99FA002F9062 /* ViewController.swift */; };
 		079EE7761CEB99FA002F9062 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 079EE7741CEB99FA002F9062 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		076C6BE41CF8D18B003FDC27 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0778AF5E1CFDCF2F00DB3154 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		079EE76D1CEB99F9002F9062 /* fireSnapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fireSnapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		079EE7701CEB99FA002F9062 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		079EE7721CEB99FA002F9062 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		079EE7641CEB99F9002F9062 = {
 			isa = PBXGroup;
 			children = (
+				0778AF5E1CFDCF2F00DB3154 /* readme.md */,
 				079EE76F1CEB99FA002F9062 /* fireSnapper */,
 				079EE76E1CEB99F9002F9062 /* Products */,
 				F935CD447E0290678AF8378C /* Pods */,
@@ -316,6 +319,7 @@
 				079EE7A81CEE3FF0002F9062 /* ShowProfileVC.swift in Sources */,
 				079EE7731CEB99FA002F9062 /* ViewController.swift in Sources */,
 				079EE78F1CEB9DC8002F9062 /* LoginVC.swift in Sources */,
+				0778AF5F1CFDCF2F00DB3154 /* readme.md in Sources */,
 				079EE78B1CEB9D0C002F9062 /* MaterialTextField.swift in Sources */,
 				079EE79E1CEBA7E4002F9062 /* MainVC.swift in Sources */,
 				079EE78A1CEB9D0C002F9062 /* MaterialButton.swift in Sources */,
